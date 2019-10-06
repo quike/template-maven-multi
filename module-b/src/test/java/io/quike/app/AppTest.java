@@ -1,15 +1,32 @@
 package io.quike.app;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import io.quike.app.module.b.App;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class AppTest {
 
   @Test
-  public void testApp() {
-    io.quike.app.module.b.App.main(new String[0]);
-    assertTrue(App.getCounter() == 1);
+  @DisplayName("App - Should fail to count on null args.")
+  public void shouldFailCountAppNullArgs() {
+    Exception exception = assertThrows(IllegalArgumentException.class, () -> App.main(null));
+    assertEquals("No null args are allowed.", exception.getMessage());
+  }
+
+  @Test
+  @DisplayName("App - Should count on empty args.")
+  public void shouldCountAppEmptyArgs() {
+    App.main(new String[0]);
+    assertEquals(0, App.getCounter());
+  }
+
+  @Test
+  @DisplayName("App - Should count on args")
+  public void shouldCountAppWithArgs() {
+    App.main(new String[] {"Hello", "World"});
+    assertEquals(2, App.getCounter());
   }
 }
