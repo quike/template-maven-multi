@@ -19,25 +19,25 @@
     <sha1 />
     <tag>v${revision}</tag>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
     <!--3rd party dependencies-->
-    <lombok.version>1.18.10</lombok.version>
-    <log4j-api.version>2.12.1</log4j-api.version>
-    <guava.version>28.1-jre</guava.version>
-    <junit.version>5.5.2</junit.version>
+    <lombok.version>1.18.12</lombok.version>
+    <log4j-api.version>2.13.3</log4j-api.version>
+    <guava.version>29.0-jre</guava.version>
+    <junit.version>5.6.2</junit.version>
     <!--Official plugins-->
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-surefire-plugin-version>2.22.2</maven-surefire-plugin-version>
     <maven-failsafe-plugin-version>${maven-surefire-plugin-version}</maven-failsafe-plugin-version>
     <!--3rd party plugins-->
-    <git-commit-id-plugin.version>3.0.1</git-commit-id-plugin.version>
-    <flatten-maven-plugin.version>1.1.0</flatten-maven-plugin.version>
-    <exists-maven-plugin.version>0.1.0</exists-maven-plugin.version>
-    <jacoco-plugin-version>0.8.4</jacoco-plugin-version>
-    <spotless.version>1.24.1</spotless.version>
-    <google-java-format.version>1.7</google-java-format.version>
+    <git-commit-id-plugin.version>4.0.1</git-commit-id-plugin.version>
+    <flatten-maven-plugin.version>1.2.4</flatten-maven-plugin.version>
+    <exists-maven-plugin.version>0.3.0</exists-maven-plugin.version>
+    <jacoco-plugin-version>0.8.5</jacoco-plugin-version>
+    <spotless.version>2.0.1</spotless.version>
+    <google-java-format.version>1.8</google-java-format.version>
   </properties>
 
   <scm>
@@ -97,6 +97,13 @@
             <target>${java.version}</target>
             <encoding>${project.build.sourceEncoding}</encoding>
             <showDeprecation>true</showDeprecation>
+            <annotationProcessorPaths>
+              <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+              </path>
+            </annotationProcessorPaths>
           </configuration>
         </plugin>
         <plugin>
