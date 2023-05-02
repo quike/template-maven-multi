@@ -16,7 +16,9 @@ public class App {
     counter = args.length;
   }
 
-  /** @return counter */
+  /**
+   * @return counter
+   */
   public static int getCounter() {
     return counter;
   }
