@@ -11,3 +11,4 @@
 ### github actions
 
 ![](https://github.com/quike/template-maven-multi/workflows/push/badge.svg)
+
