@@ -36,7 +36,7 @@
     <flatten-maven-plugin.version>1.4.1</flatten-maven-plugin.version>
     <exists-maven-plugin.version>0.8.0</exists-maven-plugin.version>
     <jacoco-plugin-version>0.8.10</jacoco-plugin-version>
-    <spotless.version>2.30.0</spotless.version>
+    <spotless.version>2.36.0</spotless.version>
     <google-java-format.version>1.15.0</google-java-format.version>
     <sonar.organization>quike-github</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
