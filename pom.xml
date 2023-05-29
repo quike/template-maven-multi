@@ -25,7 +25,7 @@
     <!--3rd party dependencies-->
     <lombok.version>1.18.16</lombok.version>
     <log4j-api.version>2.20.0</log4j-api.version>
-    <guava.version>31.1-jre</guava.version>
+    <guava.version>32.0.0-jre</guava.version>
     <junit.version>5.9.3</junit.version>
     <!--Official plugins-->
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
